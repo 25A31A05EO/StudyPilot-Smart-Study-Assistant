@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyPilot - Interactive Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>🎓 StudyPilot Prototype</h1>
+        <span>Smart Study & Task Planner</span>
+    </header>
+    
+    <main class="container">
+        <section class="stats-card">
+            <h2>Overview Analytics</h2>
+            <div class="metrics">
+                <div class="metric"><strong id="total-count">3</strong> Total Tasks</div>
+                <div class="metric"><strong id="completed-count">1</strong> Completed</div>
+                <div class="metric"><strong id="productivity-score">33%</strong> Focus Rate</div>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <h2>Task Management Engine</h2>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Enter task title (e.g. Complete DSA Assignment)..." required>
+                <select id="priority-select">
+                    <option value="High">High Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="Low">Low Priority</option>
+                </select>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <ul id="task-list">
+                <li class="task-item completed">
+                    <span>[Completed] Data Structures & Algorithms Practice</span>
+                    <button class="status-btn">Done</button>
+                </li>
+                <li class="task-item">
+                    <span>Prepare Presentation for Final Project</span>
+                    <button class="status-btn" onclick="toggleTask(this)">Mark Complete</button>
+                </li>
+                <li class="task-item">
+                    <span>Revise Flask RESTful API Concepts</span>
+                    <button class="status-btn" onclick="toggleTask(this)">Mark Complete</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
